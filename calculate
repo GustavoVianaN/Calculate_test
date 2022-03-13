@@ -1,0 +1,37 @@
+import java.util.Scanner;
+public class Main {
+public static void main(String[] args) {
+	int Primeiro_Termo;
+	int Segundo_Termo;
+  String Tipo_operacao;
+  int somador_controle=0;
+	Scanner Calculo = new Scanner(System.in);
+  System.out.print("Digite a opção desejada \n (1) SOMA: \n (2) SUBTRAÇÀO \n (3) MULTIPLICACAO \n (4) DIVISAO");
+	Tipo_operacao = Calculo.nextLine();
+	System.out.println("Digite o primeiro termo: ");
+	Primeiro_Termo = Integer.parseInt(Calculo.nextLine());
+	System.out.println("Digite o segundo termo: ");
+	Segundo_Termo = Integer.parseInt(Calculo.next());
+	if(Tipo_operacao.equals("1")) {
+		System.out.println(Primeiro_Termo + Segundo_Termo);
+		somador_controle++;			
+	}
+	if(Tipo_operacao.equals("2")) {
+		System.out.println(Primeiro_Termo - Segundo_Termo);
+		somador_controle++;		
+	}
+	if(Tipo_operacao.equals("3")) {
+		System.out.println(Primeiro_Termo * Segundo_Termo);
+		somador_controle++;			
+    }
+	if(Tipo_operacao.equals("4")) {
+		System.out.println(Primeiro_Termo / Segundo_Termo);
+		somador_controle++;			
+	}
+	
+	if(somador_controle == 0) {
+		System.out.println("Oopração inválida!");
+					
+	}
+	
+} }
